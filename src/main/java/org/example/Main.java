@@ -10,16 +10,15 @@ public class Main
 {
     public static void main(String[] args)
     {
-        SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
         System.out.println("Hello world!");
-        //List<Student> students = CRUDUtils.getStudentData("Select * from students");
-        //System.out.println(students);
-//
-        //Student student = new Student();
-        //student.setName("Ivan");
-        //student.setSurname("Ivanov");
-        //student.setCourse_name("C++");
-//
-        //System.out.println(CRUDUtils.saveStudent(student));
+        List<Student> students = CRUDUtils.getStudentData("Select * from students");
+        System.out.println(students);
+
+        Student student = new Student();
+        student.setName("Ivan");
+        student.setSurname("Ivanov");
+        student.setCourse_name("C++");
+
+        System.out.println(CRUDUtils.saveStudent(student));
     }
 }
